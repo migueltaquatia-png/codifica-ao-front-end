@@ -1,2 +1,28 @@
-# codifica-ao-front-end
-trabalhos de codificaçao de front-end no SENAI.
+# 💻 ATIVIDADES DE CODIFICAÇÃO FRONT-END - SENAI FLORIANÓPOLIS
+
+> 🎓 **ESTUDANTE DE DESENVOLVIMENTO WEB NO SENAI FLORIANÓPOLIS**
+
+Este repositório reúne os exercícios, desafios e pequenos projetos desenvolvidos durante meus estudos de **Desenvolvimento Web Front-End** no **SENAI Florianópolis**. O objetivo é registrar minha evolução prática e servir como consulta rápida.
+
+---
+
+## 🚀 Tecnologias e Conceitos
+
+- **HTML5:** Marcação semântica, acessibilidade e estruturação.
+- **CSS3:** Estilização, layouts responsivos (Flexbox e CSS Grid) e animações.
+- **JavaScript (ES6+):** Manipulação do DOM, eventos, lógica e consumo de APIs.
+- **Ferramentas:** Git, GitHub, VS Code.
+
+---
+
+## 📁 Estrutura do Repositório
+
+```text
+.
+├── modulo-01-html-css/
+│   ├── exercicio-01-tags-basicas/
+│   └── exercicio-02-flexbox/
+├── modulo-02-javascript/
+│   ├── exercicio-01-manipulacao-dom/
+│   └── exercicio-02-fetch-api/
+└── README.md
