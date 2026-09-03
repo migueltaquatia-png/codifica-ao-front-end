@@ -14,15 +14,3 @@ Este repositório reúne os exercícios, desafios e pequenos projetos desenvolvi
 - **Ferramentas:** Git, GitHub, VS Code.
 
 ---
-
-## 📁 Estrutura do Repositório
-
-```text
-.
-├── modulo-01-html-css/
-│   ├── exercicio-01-tags-basicas/
-│   └── exercicio-02-flexbox/
-├── modulo-02-javascript/
-│   ├── exercicio-01-manipulacao-dom/
-│   └── exercicio-02-fetch-api/
-└── README.md
