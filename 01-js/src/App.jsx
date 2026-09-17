@@ -3,7 +3,105 @@ import './App.css'
 
 function App() {
 
-function calcularPeso() {
+  function calculadoraDeChurrasco() {
+    let quantidadeDePessoas = parseInt(prompt("Digite a quantidade de pessoas:"));
+    let quantidadeDeCarne = parseFloat(prompt("Digite a quantidade de carne por pessoa (em kg):"));
+    let quantidadeDeBebidas = parseFloat(prompt("Digite a quantidade de bebidas por pessoa (em litros):"));
+    let agua = parseFloat(prompt("Digite a quantidade de água por pessoa (em litros):"));
+    let refri = parseFloat(prompt("Digite a quantidade de refrigerante por pessoa (em litros):"));
+
+    let totalDeCarne = quantidadeDePessoas * quantidadeDeCarne;
+    let totalDeBebidas = quantidadeDePessoas * (quantidadeDeBebidas + agua + refri); 
+
+    alert("A quantidade total de carne necessária é: " + totalDeCarne.toFixed(2) + " kg e a quantidade total de bebidas necessária é: " + totalDeBebidas.toFixed(2) + " litros.");
+
+  }
+function preçoDaRaçao() {
+      let pesoDaRaçao = parseInt(prompt("Digite o peso da ração:"));
+    let preço = 10
+
+    let precoUnitario = preço * 1;
+
+    let precoTotal = pesoDaRaçao * precoUnitario;
+    alert("O preço total da ração é: R$: " + precoTotal.toFixed(2));
+  }
+
+  function calcularPoliticaDePrecos() {
+    let precoCusto = parseFloat(prompt("Digite o preço de custo:"));
+    let precoVenda = parseFloat(prompt("Digite o preço de venda:"));  
+
+    let lucro = precoVenda - precoCusto;
+    let margemLucro = (lucro / precoCusto) * 100;
+    alert("O lucro é: R$: " + lucro.toFixed(2) + " e a margem de lucro é: " + margemLucro.toFixed(2) + "%");
+  }
+
+  function calcularPoupanca() {
+    let salario = parseFloat(prompt("Digite o salário:"));
+    let moradia = parseFloat(prompt("Digite o valor da moradia:"));
+    let agua = parseFloat(prompt("Digite o valor da água:"));
+    let luz = parseFloat(prompt("Digite o valor da luz:"));
+    let internet = parseFloat(prompt("Digite o valor da internet:"));
+    let gasolina = parseFloat(prompt("Digite o valor da gasolina:"));
+    let streaming = parseFloat(prompt("Digite o valor do streaming:"));
+    let teleone = parseFloat(prompt("Digite o valor do telefone:"));
+    let outros = parseFloat(prompt("Digite o valor de outros gastos:"));
+
+    let totalGastos = moradia + agua + luz + internet + gasolina + streaming + teleone + outros;
+    let poupanca = salario - totalGastos;
+    alert("A poupança do mês é: R$: " + poupanca.toFixed(2));
+  }
+  function calcularLucro() {
+    let gasto = parseFloat(prompt("Digite o gasto:"));
+    let ingressos = parseFloat(prompt("Digite os ingressos:"));
+    let itensVendidos = parseFloat(prompt("Digite os itens vendidos:"));
+    let lucro = ingressos + itensVendidos - gasto;
+    let lucroPorcentagem = (lucro / gasto) * 100;
+    alert("O lucro do mês é: R$: " + lucro.toFixed(2) + " e a porcentagem de lucro é: " + lucroPorcentagem.toFixed(2) + "%");
+  }
+
+function calcularPlanejamento() {
+    let quantidadeDeShows = parseInt(prompt("Digite a quantidade de shows:"));
+    let bombas =parseInt(prompt("Digite a quantidade de bombas:")); 
+
+    let quantidadePorDia = quantidadeDeShows * bombas;
+    
+    alert("A quantidade de bombas nesse shows é: " + quantidadePorDia.toFixed(2));
+  }
+  
+  let calcularFaturamento = () => {
+    let faturamento = parseFloat(prompt("Digite o faturamento:"));
+    let despesas = parseFloat(prompt("Digite as despesas:"));
+
+    let lucro = faturamento - despesas;
+    
+    alert("O lucro da da dona bete de hoje foi de: R$: " + lucro.toFixed(2));
+  }
+    
+function calcularOpreçoDoFrete() {
+    let frete = parseFloat(prompt("Digite o valor do frete:"));
+    let peso = parseFloat(prompt("Digite o peso: "));
+    let distancia = parseFloat(prompt("Digite a distância: "));
+    let volume = parseFloat(prompt("Digite o volume: "));
+
+    frete=15+(2*peso)+(0.05*distancia)+(10*volume)
+
+    alert("O preço total do frete é: R$: " + frete.toFixed(2));
+  }
+
+function calcularChance() {
+    let candidato = parseInt(prompt("Digite o nome do candidato:"));
+    let numerodeuso = parseInt(prompt("quantas fezes o aluno usou o celular:"));
+
+    if (numerodeuso === 0) {
+      alert(`O ${candidato} tem 10% de chances de sucesso!!`);
+      } else if (numerodeuso === 1) {
+      alert(`O ${candidato} tem 5% de chances de sucesso!!`);
+    } else if (numerodeuso === 2) {
+      alert(`O ${candidato} tem 2% de chances de sucesso!!`);
+    }
+  }
+
+  function calcularPeso() {
     let pesoDoCaminhao = parseFloat(prompt("Digite o peso da balança:"));
     let pesoDaCarga = parseFloat(prompt("Digite o peso do caminhão vazio:"));
 
@@ -105,7 +203,14 @@ function calcularMedia() {
 <button onClick={calculaSalario}>recebe por dia no trabalho</button>
 <button onClick={calcularPeso}>peso da carga</button>
 <button onClick={calcularChance}>chance dos candidatos</button>
-
+<button onClick={calcularOpreçoDoFrete}>telles transporte</button>
+<button onClick={calcularFaturamento}>faturamento da dona bete</button>
+<button onClick={calcularPlanejamento}>planejamento dos suprimentos</button>
+<button onClick={calcularLucro}>lucro mensal do ganso</button>
+<button onClick={calcularPoupanca}>poupança do mano juca</button>
+<button onClick={calcularPoliticaDePrecos}>política de preços</button>
+<button onClick={preçoDaRaçao}>pet shop ron bernardo</button>
+<button onClick={calculadoraDeChurrasco}>calculadora de churrasco</button>
 
       <hr />
 
