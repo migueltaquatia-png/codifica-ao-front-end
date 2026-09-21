@@ -3,6 +3,88 @@ import './App.css'
 
 function App() {
 
+
+   function gerarRelatorioKowalski(relatorios) {
+    if (relatorios.length === 0) {
+        console.log("Por favor, adicione os dados crus na lista.");
+        return;
+    }
+
+    const totalRelatorios = relatorios.length;
+    let tempoTotal = 0;
+    let valorTotal = 0;
+
+    let qtdPF = 0;
+    let valorPF = 0;
+    let tempoPF = 0;
+
+    let qtdPJ = 0;
+    let valorPJ = 0;
+    let tempoPJ = 0;
+
+    
+    relatorios.forEach(r => {
+        tempoTotal += r.tempoHoras;
+        valorTotal += r.valor;
+
+        if (r.tipo.toUpperCase() === 'PF') {
+            qtdPF++;
+            valorPF += r.valor;
+            tempoPF += r.tempoHoras;
+        } else if (r.tipo.toUpperCase() === 'PJ') {
+            qtdPJ++;
+            valorPJ += r.valor;
+            tempoPJ += r.tempoHoras;
+        }
+    });
+
+   
+    const mediaValorPF = qtdPF > 0 ? valorPF / qtdPF : 0;
+    const mediaValorPJ = qtdPJ > 0 ? valorPJ / qtdPJ : 0;
+    const mediaTempoPF = qtdPF > 0 ? tempoPF / qtdPF : 0;
+    const mediaTempoPJ = qtdPJ > 0 ? tempoPJ / qtdPJ : 0;
+
+    
+    const fmtMoeda = (valor) => valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    
+    console.log("=== RELATÓRIO DE DESEMPENHO - KOWALSKI ===");
+    console.log(`Quantidade total de relatórios: ${totalRelatorios}`);
+    console.log(`Tempo total trabalhado: ${tempoTotal} horas`);
+    console.log(`Valor total recebido: ${fmtMoeda(valorTotal)}`);
+    console.log("------------------------------------------");
+    console.log(`Média de valor por relatório PF: ${fmtMoeda(mediaValorPF)}`);
+    console.log(`Média de valor por relatório PJ: ${fmtMoeda(mediaValorPJ)}`);
+    console.log("------------------------------------------");
+    console.log(`Média de tempo por relatório PF: ${mediaTempoPF.toFixed(2)} horas`);
+    console.log(`Média de tempo por relatório PJ: ${mediaTempoPJ.toFixed(2)} horas`);
+
+    gerarRelatorioKowalski(dadosCrus);
+  }  
+
+   function calcularTokens(promptTexto) {
+    
+    let numCaracteres = promptTexto.length;
+    
+    
+    let custoTotal = 5 + numCaracteres;
+    
+    return custoTotal;
+    let meuPrompt = "Qual a capital do Brasil?";
+let total = calcularTokens(meuPrompt);
+
+console.log(`Texto: "${meuPrompt}"`);
+console.log(`Caracteres: ${meuPrompt.length}`);
+console.log(`Tokens gastos: ${total}`); 
+  }
+
+  function vendasDeJares() {
+    let quantidadeDeJares = parseInt(prompt("Digite a quantidade de caminhao:"));
+    let precoUnitario = parseFloat(prompt("Digite o preço unitário por caminhao:"));
+    let faturamento = quantidadeDeJares * precoUnitario;
+    alert("O faturamento com a venda dos jarés é: R$: " + faturamento.toFixed(2));
+  }
+
   function calculadoraDeChurrasco() {
     let quantidadeDePessoas = parseInt(prompt("Digite a quantidade de pessoas:"));
     let quantidadeDeCarne = parseFloat(prompt("Digite a quantidade de carne por pessoa (em kg):"));
@@ -195,22 +277,26 @@ function calcularMedia() {
 
     <button onClick={calcularPontos}>campeonato de futebol
     </button>
-<button onClick={calcularSapatos}>trocas pe pequeno</button>
-<button onClick={quatosDevs}>numero de devs</button>
-<button onClick={calcularFrete}>calcular o preço do frete</button>
-<button onClick={calcularFrutas}>estoque de frutas</button>
-<button onClick={calcularFinancas}>finança da sua igreja</button>
-<button onClick={calculaSalario}>recebe por dia no trabalho</button>
-<button onClick={calcularPeso}>peso da carga</button>
-<button onClick={calcularChance}>chance dos candidatos</button>
-<button onClick={calcularOpreçoDoFrete}>telles transporte</button>
-<button onClick={calcularFaturamento}>faturamento da dona bete</button>
-<button onClick={calcularPlanejamento}>planejamento dos suprimentos</button>
-<button onClick={calcularLucro}>lucro mensal do ganso</button>
-<button onClick={calcularPoupanca}>poupança do mano juca</button>
-<button onClick={calcularPoliticaDePrecos}>política de preços</button>
-<button onClick={preçoDaRaçao}>pet shop ron bernardo</button>
-<button onClick={calculadoraDeChurrasco}>calculadora de churrasco</button>
+<button onClick={calcularSapatos}>1-trocas pe pequeno</button>
+<button onClick={quatosDevs}>2-numero de devs</button>
+<button onClick={calcularFrete}>3-calcular o preço do frete</button>
+<button onClick={calcularFrutas}>4-estoque de frutas</button>
+<button onClick={calcularFinancas}>5-finança da sua igreja</button>
+<button onClick={calculaSalario}>6-recebe por dia no trabalho</button>
+<button onClick={calcularPeso}>7-peso da carga</button>
+<button onClick={calcularChance}>8-chance dos candidatos</button>
+<button onClick={calcularOpreçoDoFrete}>9-telles transporte</button>
+<button onClick={calcularFaturamento}>10-faturamento da dona bete</button>
+<button onClick={calcularPlanejamento}>11-planejamento dos suprimentos</button>
+<button onClick={calcularLucro}>12-lucro mensal do ganso</button>
+<button onClick={calcularPoupanca}>13-poupança do mano juca</button>
+<button onClick={calcularPoliticaDePrecos}>14-política de preços</button>
+<button onClick={preçoDaRaçao}>15-pet shop ron bernardo</button>
+<button onClick={calculadoraDeChurrasco}>16-calculadora de churrasco</button>
+<button onClick={vendasDeJares}>17-jarés na fazenda de Gael</button>
+<button onClick={calcularTokens}>18-preço dos prompts</button>
+<button onClick={gerarRelatorioKowalski}>19-relatório dos relatórios</button>
+
 
       <hr />
 
