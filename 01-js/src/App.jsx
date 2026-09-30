@@ -1,7 +1,10 @@
 
+import { useState } from 'react';
 import './App.css'
 
 function App() {
+
+  const[resultado, setResultado] = useState(0)
 
 
    function gerarRelatorioKowalski(relatorios) {
@@ -269,9 +272,28 @@ function calcularMedia() {
   let media = (nota1 + nota2) / 2;
   alert("A média das notas é: " + media);
 }
+
+function calcularDobro(){
+  let numero = Number(prompt("DIGITE O NUMERO A-GO-RA: "))
+  let dobro = numero * 2
+  setResultado(dobro)
+}
+
   return (
     <div className="cont-App">
       <h1>javascript no React</h1>
+
+    <hr />
+    <h2>usando estados</h2>
+    <button onClick={calcularDobro}>estados - dobro</button>
+    
+<p>
+  resultado da operaçao: {resultado}
+</p>
+
+    <hr />
+
+
 
       <h2>atividades muito boas</h2>
 
