@@ -5,7 +5,7 @@ import React from 'react'
 function pousada() {
     const [valor, setValor] = React.useState()
 
-function classificar() {
+function classificar() {    
     let dias = parseFloat(prompt("quanto tempo vc vai ficar?"))
     let valor
 

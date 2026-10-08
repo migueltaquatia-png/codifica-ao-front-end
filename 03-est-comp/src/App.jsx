@@ -1,6 +1,9 @@
 import './App.css'
 import  Jogo from './components/jogo'
 import  Pousada from './components/pousada'
+import IdadesParaEleição from './components/IdadesParaEleição'
+import Altura from './components/altura'
+import Feira from './components/feira'
 function App() {
   
 
@@ -11,6 +14,9 @@ function App() {
          
       <Jogo />
       <Pousada />
+      <IdadesParaEleição />
+      <Altura />
+      <Feira />
     </div>
   )
 }
