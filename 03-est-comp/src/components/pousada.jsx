@@ -30,9 +30,9 @@ function classificar() {
     <div className='pousada'>
         <h2>pousada, e ai tropa</h2>
          <button onClick={classificar}>pousada mano juca</button>
-         {valor}
+         <p>{valor}</p>
     </div>
   )
 }
 
-export default pousada
+export default pousada;
