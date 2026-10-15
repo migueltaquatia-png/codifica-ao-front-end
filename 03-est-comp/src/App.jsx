@@ -10,6 +10,8 @@ import Fumaça from './components/Fumaça Mística'
 import Deslocamento from './components/deslocamento'
 import TransporteInterno from './components/TransporteInterno'
 import CentroDeComando from './components/centroDeComando'
+import Palco from './components/Palco'
+import Jaulas from './components/jaulas'
 
 
 
@@ -21,6 +23,8 @@ function App() {
       <h1>03 estados e componentes</h1>
       
 <h2>#0030</h2>
+   <jaulas />
+   <Palco />
    <CentroDeComando />
    <TransporteInterno />
    <Deslocamento />
