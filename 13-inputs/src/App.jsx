@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+import Home from './pages/Home'
+import Demo from './pages/Demo'
+import Ex0081 from './pages/ex0081'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
    <div className='app'>
-    <h1>Inputs controlados</h1>
-     <label htmlFor="">Login</label>
-    <input type="text" />
-    <button>entrar</button>
+    <Demo />
+    <Home />
+    <Ex0081 />
+    
    </div>
   )
 }

@@ -24,7 +24,7 @@ Não nos deixei cair em callback hell,
 
 Mas livrai-nos dos bugs de produção.
 
-Amém, amém, git commit -m "Aleluia".</p>
+Amém, amém, git commit -m "Aleluia".npm </p>
 
     </div>
   )
